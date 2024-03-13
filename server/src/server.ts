@@ -1,8 +1,5 @@
-import express from 'express'
-const app = express()
+import App from './app'
 
-app.use('/', (req, res) => {
-    res.status(200).send('initiate the app')
-})
-
-app.listen(3000)
+const PORT = 3000
+const app = new App(PORT)
+app.start()
