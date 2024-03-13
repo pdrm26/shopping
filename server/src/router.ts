@@ -1,4 +1,5 @@
 import { Application, Request, Response } from 'express'
+import usersRouter from './components/user/usersRouter'
 
 export default class Router {
     private app: Application
@@ -7,6 +8,6 @@ export default class Router {
     }
 
     public run() {
-        this.app.get('/', (req: Request, res: Response) => res.send('Hi i am from the router file (;'))
+        this.app.use('/api/v1', usersRouter)
     }
 }
