@@ -1,9 +1,9 @@
-import Mongo from '../infrastructure/connection/mongodb'
+import { config as loadEnvironmentsVars } from 'dotenv'
 import App from './app'
-import { config } from 'dotenv'
-config()
+import startMongoose from '../infrastructure/connection/mongoose'
 
-new Mongo()
+loadEnvironmentsVars()
+startMongoose()
+
 const app = new App(Number(process.env.APP_PORT))
-
 app.start()

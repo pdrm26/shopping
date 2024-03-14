@@ -1,28 +1,17 @@
-export interface IUser {
-    first_name: string
-    last_name: string
-    mobile: string
-    email: string
-    total_orders: number
-    wallet: number
-    created_at: Date
-}
+import { Schema, model } from 'mongoose'
+import IUser from './IUser'
+import addressSchema from './Address'
 
-// Define JSON schema for user collection
-const userSchema = {
-    $jsonSchema: {
-        bsonType: 'object',
-        required: ['first_name', 'last_name', 'mobile', 'email'],
-        properties: {
-            first_name: { bsonType: 'string', description: 'must be a string and is required' },
-            last_name: { bsonType: 'string', description: 'must be a string and is required' },
-            mobile: { bsonType: 'string' },
-            email: { bsonType: 'string' },
-            total_orders: { bsonType: 'number' },
-            wallet: { bsonType: 'number' },
-            created_at: { bsonType: 'date' },
-        },
-    },
-}
+const userSchema: Schema = new Schema({
+    firstName: { type: String, required: true },
+    lastName: { type: String, required: true },
+    email: { type: String, required: true, unique: true },
+    mobile: { type: String, unique: true },
+    totalOrders: { type: Number, default: 0 },
+    wallet: { type: Number, default: 0 },
+    password: { type: String },
+    addresses: { type: [addressSchema], default: [] },
+    createdAt: { type: Date, default: Date.now },
+})
 
-export default userSchema
+export default model<IUser>('User', userSchema)
