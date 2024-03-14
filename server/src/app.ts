@@ -1,6 +1,7 @@
 import express, { Application } from 'express'
 import Router from './router'
 import usersRouter from './components/user/usersRouter'
+import productsRouter from './components/product/productsRouter'
 
 export default class App {
     public app: Application
@@ -16,6 +17,7 @@ export default class App {
 
     private registerRouters() {
         this.router.registerRouter('/api/v1', usersRouter)
+        this.router.registerRouter('/api/v1', productsRouter)
     }
 
     public start() {
