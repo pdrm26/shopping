@@ -6,8 +6,8 @@ export default class UsersController {
         try {
             const allUsers = await User.find({})
             res.status(200).send({ allUsers })
-        } catch (error: any) {
-            res.status(500).send(error.messsage)
+        } catch (err) {
+            res.status(500).send('Something wrong happend')
         }
     }
 

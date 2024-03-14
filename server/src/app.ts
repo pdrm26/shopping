@@ -1,5 +1,4 @@
 import express, { Application } from 'express'
-import Router from './router'
 import RouteService from './router/routeService'
 
 export default class App {

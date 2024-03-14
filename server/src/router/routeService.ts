@@ -1,5 +1,5 @@
-import usersRouter from '../components/user/usersRouter'
 import productsRouter from '../components/product/productsRouter'
+import usersRouter from '../components/user/usersRouter'
 import RouteEngine from '.'
 import { Application } from 'express'
 

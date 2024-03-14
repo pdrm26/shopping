@@ -1,17 +1,21 @@
 {
+    "root": true,
     "env": {
-        "es2021": true,
         "node": true
     },
-    "outDir": "build",
-    "extends": ["eslint:recommended", "plugin:@typescript-eslint/recommended"],
     "parser": "@typescript-eslint/parser",
     "parserOptions": {
-        "ecmaVersion": "latest",
+        "ecmaVersion": 2021,
         "sourceType": "module"
     },
-    "plugins": ["@typescript-eslint"],
-    "rules": {},
-    "include": ["./src/**/*.ts"],
-    "exclude": ["node_modules", "./src/public"]
+    "extends": [
+        "eslint:recommended",
+        "plugin:@typescript-eslint/recommended",
+        "plugin:prettier/recommended"
+    ],
+    "plugins": ["@typescript-eslint", "prettier"],
+    "rules": {
+        // Add any specific rules you want to enforce
+    },
+    "ignorePatterns": ["node_modules/", "**/*.test.ts"]
 }
