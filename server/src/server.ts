@@ -1,5 +1,7 @@
 import App from './app'
+import { config } from 'dotenv'
 
-const PORT = 3000
-const app = new App(PORT)
+config()
+const app = new App(Number(process.env.APP_PORT))
+
 app.start()
