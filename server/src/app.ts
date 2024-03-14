@@ -14,6 +14,7 @@ export default class App {
     }
 
     public start() {
+        this.app.use(express.json())
         this.app.listen(this.port, () => console.log(`Server is running on port ${this.port}`))
         this.router.run()
     }
