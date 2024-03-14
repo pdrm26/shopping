@@ -1,12 +1,26 @@
-import { MongoClient } from 'mongodb'
+import { Db, MongoClient } from 'mongodb'
 
-const MONGO_URI = `${process.env.MONGO_HOST}:${process.env.MONGO_PORT}`
+export default class Mongo {
+    private static client: MongoClient
 
-async function run() {
-    const client = new MongoClient(`mongodb://${MONGO_URI}`)
-    console.log(`Try connecting to mongodb://${MONGO_URI}`)
-    await client.connect().then((res) => console.log('SUCCESSFULLY CONNECT TO THE MONGO'))
-    const db = client.db(process.env.MONGO_DB)
+    constructor() {
+        console.log(`Try connecting to mongodb://${process.env.MONGO_HOST}:${process.env.MONGO_PORT}`)
+        this.connect()
+    }
+
+    private async connect() {
+        try {
+            Mongo.client = await MongoClient.connect(`mongodb://${process.env.MONGO_HOST}:${process.env.MONGO_PORT}`)
+            console.log('SUCCESSFULLY CONNECTED TO MONGODB')
+        } catch (error) {
+            console.error('Error connecting to MongoDB:', error)
+        }
+    }
+
+    static db(): Db {
+        if (!Mongo.client) {
+            throw new Error('MongoDB client is not connected')
+        }
+        return Mongo.client.db()
+    }
 }
-
-run()
