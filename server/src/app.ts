@@ -16,8 +16,8 @@ export default class App {
     }
 
     private registerRouters() {
-        this.router.registerRouter('/api/v1', usersRouter)
-        this.router.registerRouter('/api/v1', productsRouter)
+        this.router.registerRouter('/api/v1/users', usersRouter)
+        this.router.registerRouter('/api/v1/products', productsRouter)
     }
 
     public start() {

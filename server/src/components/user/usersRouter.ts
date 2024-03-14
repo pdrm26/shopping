@@ -3,7 +3,6 @@ import usersController from './usersController'
 
 const usersRouter = Router()
 
-usersRouter.get('/users', usersController.getAllUsers)
-
+usersRouter.get('/', usersController.getAllUsers)
 
 export default usersRouter
