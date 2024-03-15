@@ -2,7 +2,7 @@ import { Schema, model } from 'mongoose'
 import IUser from './IUser'
 import addressSchema from './Address'
 
-const userSchema: Schema = new Schema({
+const userSchema = new Schema({
     firstName: { type: String, required: true },
     lastName: { type: String, required: true },
     email: { type: String, required: true, unique: true },
