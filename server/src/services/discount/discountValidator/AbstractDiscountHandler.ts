@@ -7,11 +7,10 @@ export default abstract class AbstractDiscountHandler implements DiscountHandler
 
     setNext(handler: DiscountHandler): DiscountHandler {
         this.nextHandler = handler
-
-        return this.nextHandler
+        return handler
     }
 
-    process(discount: IDiscount, user: IUser): IDiscount | null {
+    process(discount: IDiscount, user?: IUser): IDiscount | null {
         if (this.nextHandler) {
             this.nextHandler.process(discount, user)
         }
