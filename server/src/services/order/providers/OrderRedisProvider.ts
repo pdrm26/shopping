@@ -1,14 +1,12 @@
 import IProduct from '@src/components/product/model/IProduct'
 import IOrder from '../contracts/IOrder'
 import { tedis } from '@infrastructure/connection/redis'
+import IOrderConfigurable from '../contracts/IOrderConfigurable'
 
-export default class OrderRedisProvider implements IOrder {
+export default class OrderRedisProvider implements IOrder, IOrderConfigurable {
     // key = 'session:order:uid'
 
     private key = ''
-    constructor(key: string) {
-        this.key = key
-    }
 
     private async getOrdersFromRedis(): Promise<IProduct[]> {
         const orders = await tedis
@@ -21,6 +19,10 @@ export default class OrderRedisProvider implements IOrder {
         }
 
         return []
+    }
+
+    config(key: string) {
+        this.key = key
     }
 
     async add(product: IProduct) {
