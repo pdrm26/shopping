@@ -2,6 +2,7 @@ import { Schema, model } from 'mongoose'
 import IOrder from './IOrder'
 import OrderStatus from './OrderStatus'
 import OrderItem from './OrderItem'
+import addressSchema from '@src/components/user/model/Address'
 
 const orderSchema = new Schema({
     user: { type: Schema.Types.ObjectId, ref: 'User', rquired: true },
@@ -14,6 +15,7 @@ const orderSchema = new Schema({
     discount: { type: Object, default: null },
     finalPrice: { type: Number, rquired: true },
     orderItems: { type: [OrderItem], required: true },
+    deliveryAddress: { type: [addressSchema], default: null },
 })
 
 export default model<IOrder>('Order', orderSchema)

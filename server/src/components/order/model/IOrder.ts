@@ -1,6 +1,7 @@
 import { Document } from 'mongoose'
 import OrderStatus from './OrderStatus'
 import IOrderItem from './IOrderItem'
+import IAddress from '@src/components/user/model/IAddress'
 
 export default interface IOrder extends Document {
     user: object
@@ -12,4 +13,5 @@ export default interface IOrder extends Document {
     discount: object
     finalPrice: number
     orderItems: IOrderItem[]
+    deliveryAddress: IAddress
 }
