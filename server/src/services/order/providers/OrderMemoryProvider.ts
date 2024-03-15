@@ -1,7 +1,7 @@
 import IProduct from '@src/components/product/model/IProduct'
 import IOrder from '../contracts/IOrder'
 
-export default class BasketMemoryProvider implements IOrder {
+export default class OrderMemoryProvider implements IOrder {
     private orderItems: IProduct[] = []
 
     add(product: IProduct) {
