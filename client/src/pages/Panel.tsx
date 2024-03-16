@@ -8,10 +8,10 @@ export default function Panel() {
         <Theme>
             <Container maxWidth="xl">
                 <Grid container spacing={3}>
-                    <Grid item xs={2} lg={3} sx={{ mt: "20px" }}>
+                    <Grid item md={3} sx={{ mt: "20px" }}>
                         <Sidebar />
                     </Grid>
-                    <Grid item xs={10} lg={9} sx={{ mt: "20px" }}>
+                    <Grid item md={9} sx={{ mt: "20px" }}>
                         <Dashboard />
                     </Grid>
                 </Grid>
