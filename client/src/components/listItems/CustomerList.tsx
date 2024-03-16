@@ -16,7 +16,7 @@ export default function CustomerList() {
                 <ListItemIcon>
                     <PeopleAltIcon />
                 </ListItemIcon>
-                <ListItemText primary="Customer List" />
+                <ListItemText primary="Customers" />
                 {open ? <ExpandLess /> : <ExpandMore />}
             </ListItemButton>
             <Collapse in={open} timeout="auto" unmountOnExit>
@@ -25,7 +25,7 @@ export default function CustomerList() {
                         <ListItemIcon>
                             <FormatListBulletedIcon />
                         </ListItemIcon>
-                        <ListItemText primary="Customers" />
+                        <ListItemText primary="Customers List" />
                     </ListItemButton>
                 </List>
             </Collapse>
