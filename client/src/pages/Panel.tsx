@@ -6,12 +6,12 @@ import Theme from "../theme/Theme";
 export default function Panel() {
     return (
         <Theme>
-            <Container maxWidth="xl" sx={{ mt: "20px" }}>
+            <Container maxWidth="xl">
                 <Grid container spacing={3}>
-                    <Grid item xs={2} lg={3}>
+                    <Grid item xs={2} lg={3} sx={{ mt: "20px" }}>
                         <Sidebar />
                     </Grid>
-                    <Grid item xs={10} lg={9}>
+                    <Grid item xs={10} lg={9} sx={{ mt: "20px" }}>
                         <Dashboard />
                     </Grid>
                 </Grid>
