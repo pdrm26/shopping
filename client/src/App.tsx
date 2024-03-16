@@ -1,3 +1,9 @@
+import Panel from "./pages/Panel";
+
 export default function App() {
-    return <p>app</p>;
+    return (
+        <>
+            <Panel />
+        </>
+    );
 }
