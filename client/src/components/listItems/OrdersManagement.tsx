@@ -1,5 +1,5 @@
 import { ExpandLess, ExpandMore } from "@mui/icons-material";
-import { Collapse, List, ListItemButton, ListItemIcon, ListItemText } from "@mui/material";
+import { Badge, Collapse, List, ListItemButton, ListItemIcon, ListItemText } from "@mui/material";
 import FormatListBulletedIcon from "@mui/icons-material/FormatListBulleted";
 import { useState } from "react";
 import ShoppingBasketIcon from "@mui/icons-material/ShoppingBasket";
@@ -26,6 +26,7 @@ export default function OrdersManagement() {
                             <FormatListBulletedIcon />
                         </ListItemIcon>
                         <ListItemText primary="Orders List" />
+                        <Badge badgeContent={1000} max={999} color="primary" sx={{ mr: 5 }}></Badge>
                     </ListItemButton>
                 </List>
             </Collapse>
