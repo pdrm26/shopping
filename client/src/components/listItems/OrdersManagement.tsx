@@ -5,7 +5,7 @@ import { useState } from "react";
 import ShoppingBasketIcon from "@mui/icons-material/ShoppingBasket";
 
 export default function OrdersManagement() {
-    const [open, setOpen] = useState(true);
+    const [open, setOpen] = useState(false);
 
     const handleClick = () => {
         setOpen(!open);

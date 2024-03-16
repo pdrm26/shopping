@@ -6,7 +6,7 @@ import LocalAtmIcon from "@mui/icons-material/LocalAtm";
 import MoneyOffIcon from "@mui/icons-material/MoneyOff";
 
 export default function FinancialManagement() {
-    const [open, setOpen] = useState(true);
+    const [open, setOpen] = useState(false);
 
     const handleClick = () => {
         setOpen(!open);

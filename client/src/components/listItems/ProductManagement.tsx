@@ -7,7 +7,7 @@ import ProductionQuantityLimitsIcon from "@mui/icons-material/ProductionQuantity
 import RedeemIcon from "@mui/icons-material/Redeem";
 
 export default function ProductManagement() {
-    const [open, setOpen] = useState(true);
+    const [open, setOpen] = useState(false);
 
     const handleClick = () => {
         setOpen(!open);

@@ -5,7 +5,7 @@ import FormatListBulletedIcon from "@mui/icons-material/FormatListBulleted";
 import PeopleAltIcon from "@mui/icons-material/PeopleAlt";
 
 export default function CustomerList() {
-    const [open, setOpen] = useState(true);
+    const [open, setOpen] = useState(false);
 
     const handleClick = () => {
         setOpen(!open);

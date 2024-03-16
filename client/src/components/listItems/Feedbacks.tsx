@@ -5,7 +5,7 @@ import FormatListBulletedIcon from "@mui/icons-material/FormatListBulleted";
 import RateReviewIcon from "@mui/icons-material/RateReview";
 
 export default function Feedbacks() {
-    const [open, setOpen] = useState(true);
+    const [open, setOpen] = useState(false);
 
     const handleClick = () => {
         setOpen(!open);

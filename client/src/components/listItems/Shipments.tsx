@@ -4,9 +4,8 @@ import { useState } from "react";
 import LocalShippingIcon from "@mui/icons-material/LocalShipping";
 import FormatListBulletedIcon from "@mui/icons-material/FormatListBulleted";
 
-
 export default function Shipments() {
-    const [open, setOpen] = useState(true);
+    const [open, setOpen] = useState(false);
 
     const handleClick = () => {
         setOpen(!open);
