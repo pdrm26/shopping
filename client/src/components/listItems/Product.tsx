@@ -6,7 +6,7 @@ import { useState } from "react";
 import ProductionQuantityLimitsIcon from "@mui/icons-material/ProductionQuantityLimits";
 import RedeemIcon from "@mui/icons-material/Redeem";
 
-export default function ProductManagement() {
+export default function Product() {
     const [open, setOpen] = useState(false);
 
     const handleClick = () => {

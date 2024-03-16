@@ -4,7 +4,7 @@ import FormatListBulletedIcon from "@mui/icons-material/FormatListBulleted";
 import { useState } from "react";
 import ShoppingBasketIcon from "@mui/icons-material/ShoppingBasket";
 
-export default function OrdersManagement() {
+export default function Orders() {
     const [open, setOpen] = useState(false);
 
     const handleClick = () => {

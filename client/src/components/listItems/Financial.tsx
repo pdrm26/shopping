@@ -1,10 +1,11 @@
 import { ExpandLess, ExpandMore } from "@mui/icons-material";
 import { Collapse, List, ListItemButton, ListItemIcon, ListItemText } from "@mui/material";
 import { useState } from "react";
-import LocalShippingIcon from "@mui/icons-material/LocalShipping";
-import FormatListBulletedIcon from "@mui/icons-material/FormatListBulleted";
+import AccountBalanceWalletIcon from "@mui/icons-material/AccountBalanceWallet";
+import LocalAtmIcon from "@mui/icons-material/LocalAtm";
+import MoneyOffIcon from "@mui/icons-material/MoneyOff";
 
-export default function Shipments() {
+export default function Financial() {
     const [open, setOpen] = useState(false);
 
     const handleClick = () => {
@@ -14,18 +15,24 @@ export default function Shipments() {
         <>
             <ListItemButton onClick={handleClick}>
                 <ListItemIcon>
-                    <LocalShippingIcon />
+                    <LocalAtmIcon />
                 </ListItemIcon>
-                <ListItemText primary="Shipments" />
+                <ListItemText primary="Financial Management" />
                 {open ? <ExpandLess /> : <ExpandMore />}
             </ListItemButton>
             <Collapse in={open} timeout="auto" unmountOnExit>
                 <List component="div" disablePadding>
                     <ListItemButton sx={{ pl: 4 }}>
                         <ListItemIcon>
-                            <FormatListBulletedIcon />
+                            <AccountBalanceWalletIcon />
                         </ListItemIcon>
-                        <ListItemText primary="Shpping List" />
+                        <ListItemText primary="Payments" />
+                    </ListItemButton>
+                    <ListItemButton sx={{ pl: 4 }}>
+                        <ListItemIcon>
+                            <MoneyOffIcon />
+                        </ListItemIcon>
+                        <ListItemText primary="Discount Codes" />
                     </ListItemButton>
                 </List>
             </Collapse>

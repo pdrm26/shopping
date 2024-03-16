@@ -1,22 +1,22 @@
 import { Divider, List } from "@mui/material";
-import ProductManagement from "./listItems/ProductManagement";
-import OrdersManagement from "./listItems/OrdersManagement";
-import FinancialManagement from "./listItems/FinancialManagement";
-import Shipments from "./listItems/Shipments";
+import Delivery from "./listItems/Delivery";
 import CustomerList from "./listItems/CustomerList";
 import Settings from "./listItems/Settings";
 import Feedbacks from "./listItems/Feedbacks";
+import Product from "./listItems/Product";
+import Orders from "./listItems/Orders";
+import Financial from "./listItems/Financial";
 
 export default function Sidebar() {
     return (
         <List sx={{ width: "100%", bgcolor: "background.paper" }} component="nav">
-            <ProductManagement />
+            <Product />
             <Divider />
-            <OrdersManagement />
+            <Orders />
             <Divider />
-            <FinancialManagement />
+            <Financial />
             <Divider />
-            <Shipments />
+            <Delivery />
             <Divider />
             <CustomerList />
             <Divider />
