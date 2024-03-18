@@ -32,7 +32,7 @@ export default function Product() {
                             <ListItemText primary="Add Product" />
                         </ListItemButton>
                     </NavLink>
-                    <NavLink to="products/categories/add">
+                    <NavLink to="products/categories/edit">
                         <ListItemButton sx={{ pl: 4 }}>
                             <ListItemIcon>
                                 <AddCircleOutlined />

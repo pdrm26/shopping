@@ -11,7 +11,7 @@ import FinancialDiscountCodes from "./components/panels/financial/FinancialDisco
 import DeliveryList from "./components/panels/delivery/DeliveryList";
 import FeedbacksList from "./components/panels/feedbacks/FeedbacksList";
 import SettingsSecurity from "./components/panels/settings/SettingsSecurity";
-import ProductCategoryAdd from "./components/panels/product/ProductCategoryAdd";
+import EditCategory from "./components/panels/product/EditCategory";
 
 export default function App() {
     return (
@@ -21,7 +21,7 @@ export default function App() {
                     {/* Product */}
                     <Route path="products/list" element={<ProductsList />} />
                     <Route path="products/add" element={<ProductAdd />} />
-                    <Route path="products/categories/add" element={<ProductCategoryAdd />} />
+                    <Route path="products/categories/edit" element={<EditCategory />} />
                     <Route path="products/categories" element={<ProductCategories />} />
                     <Route path="products/offers" element={<ProductsOffers />} />
                     {/* Orders */}
