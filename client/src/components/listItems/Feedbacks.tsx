@@ -3,6 +3,7 @@ import { Collapse, List, ListItemButton, ListItemIcon, ListItemText } from "@mui
 import { useState } from "react";
 import FormatListBulletedIcon from "@mui/icons-material/FormatListBulleted";
 import RateReviewIcon from "@mui/icons-material/RateReview";
+import { NavLink } from "react-router-dom";
 
 export default function Feedbacks() {
     const [open, setOpen] = useState(false);
@@ -21,12 +22,14 @@ export default function Feedbacks() {
             </ListItemButton>
             <Collapse in={open} timeout="auto" unmountOnExit>
                 <List component="div" disablePadding>
-                    <ListItemButton sx={{ pl: 4 }}>
-                        <ListItemIcon>
-                            <FormatListBulletedIcon />
-                        </ListItemIcon>
-                        <ListItemText primary="List of Feedbacks" />
-                    </ListItemButton>
+                    <NavLink to="feedbacks/list">
+                        <ListItemButton sx={{ pl: 4 }}>
+                            <ListItemIcon>
+                                <FormatListBulletedIcon />
+                            </ListItemIcon>
+                            <ListItemText primary="List of Feedbacks" />
+                        </ListItemButton>
+                    </NavLink>
                 </List>
             </Collapse>
         </>

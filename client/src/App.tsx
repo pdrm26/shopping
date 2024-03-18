@@ -9,6 +9,7 @@ import OrdersList from "./components/panels/orders/OrdersList";
 import FinancialPayments from "./components/panels/financial/FinancialPayments";
 import FinancialDiscountCodes from "./components/panels/financial/FinancialDiscountCodes";
 import DeliveryList from "./components/panels/delivery/DeliveryList";
+import FeedbacksList from "./components/panels/feedbacks/FeedbacksList";
 
 export default function App() {
     return (
@@ -29,6 +30,8 @@ export default function App() {
                     <Route path="delivery/list" element={<DeliveryList />} />
                     {/* Customers */}
                     <Route path="customers/list" element={<CustomerList />} />
+                    {/* Feedbacks */}
+                    <Route path="feedbacks/list" element={<FeedbacksList />} />
                 </Route>
                 <Route path="/news" element={<h1>news</h1>} />
                 <Route path="/about" element={<h1>about</h1>} />
