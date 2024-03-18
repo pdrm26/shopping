@@ -3,6 +3,7 @@ import { Collapse, List, ListItemButton, ListItemIcon, ListItemText } from "@mui
 import { useState } from "react";
 import SettingsIcon from "@mui/icons-material/Settings";
 import AdminPanelSettingsIcon from "@mui/icons-material/AdminPanelSettings";
+import { NavLink } from "react-router-dom";
 
 export default function Settings() {
     const [open, setOpen] = useState(false);
@@ -21,12 +22,14 @@ export default function Settings() {
             </ListItemButton>
             <Collapse in={open} timeout="auto" unmountOnExit>
                 <List component="div" disablePadding>
-                    <ListItemButton sx={{ pl: 4 }}>
-                        <ListItemIcon>
-                            <AdminPanelSettingsIcon />
-                        </ListItemIcon>
-                        <ListItemText primary="Security" />
-                    </ListItemButton>
+                    <NavLink to="settings/security">
+                        <ListItemButton sx={{ pl: 4 }}>
+                            <ListItemIcon>
+                                <AdminPanelSettingsIcon />
+                            </ListItemIcon>
+                            <ListItemText primary="Security" />
+                        </ListItemButton>
+                    </NavLink>
                 </List>
             </Collapse>
         </>
