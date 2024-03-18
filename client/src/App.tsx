@@ -1,6 +1,6 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Panel from "./pages/Panel";
-import CustomerList from "./components/panels/CustomerList";
+import CustomerList from "./components/panels/CustomersList";
 
 export default function App() {
     return (

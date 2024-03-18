@@ -4,7 +4,7 @@ import { useState } from "react";
 import FormatListBulletedIcon from "@mui/icons-material/FormatListBulleted";
 import PeopleAltIcon from "@mui/icons-material/PeopleAlt";
 
-export default function CustomerList() {
+export default function CustomersList() {
     const [open, setOpen] = useState(false);
 
     const handleClick = () => {

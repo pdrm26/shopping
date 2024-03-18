@@ -1,6 +1,6 @@
 import { Divider, List } from "@mui/material";
 import Delivery from "./listItems/Delivery";
-import CustomerList from "./listItems/CustomerList";
+import CustomerList from "./listItems/CustomersList";
 import Settings from "./listItems/Settings";
 import Feedbacks from "./listItems/Feedbacks";
 import Product from "./listItems/Product";
