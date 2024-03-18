@@ -5,6 +5,7 @@ import ProductsList from "./components/panels/product/ProductsList";
 import ProductAdd from "./components/panels/product/ProductAdd";
 import ProductsSection from "./components/panels/product/ProductsSection";
 import ProductsOffers from "./components/panels/product/ProductsOffers";
+import OrdersList from "./components/panels/orders/OrdersList";
 
 export default function App() {
     return (
@@ -16,6 +17,8 @@ export default function App() {
                     <Route path="products/add" element={<ProductAdd />} />
                     <Route path="products/sections" element={<ProductsSection />} />
                     <Route path="products/offers" element={<ProductsOffers />} />
+                    {/* Orders */}
+                    <Route path="orders/list" element={<OrdersList />} />
                     {/* Customers */}
                     <Route path="customers/list" element={<CustomerList />} />
                 </Route>
