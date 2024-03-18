@@ -8,6 +8,7 @@ import ProductsOffers from "./components/panels/product/ProductsOffers";
 import OrdersList from "./components/panels/orders/OrdersList";
 import FinancialPayments from "./components/panels/financial/FinancialPayments";
 import FinancialDiscountCodes from "./components/panels/financial/FinancialDiscountCodes";
+import DeliveryList from "./components/panels/delivery/DeliveryList";
 
 export default function App() {
     return (
@@ -24,6 +25,8 @@ export default function App() {
                     {/* Financial */}
                     <Route path="financial/payments" element={<FinancialPayments />} />
                     <Route path="financial/discount-codes" element={<FinancialDiscountCodes />} />
+                    {/* Delivery */}
+                    <Route path="delivery/list" element={<DeliveryList />} />
                     {/* Customers */}
                     <Route path="customers/list" element={<CustomerList />} />
                 </Route>

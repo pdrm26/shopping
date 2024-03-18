@@ -3,6 +3,7 @@ import { Collapse, List, ListItemButton, ListItemIcon, ListItemText } from "@mui
 import { useState } from "react";
 import LocalShippingIcon from "@mui/icons-material/LocalShipping";
 import FormatListBulletedIcon from "@mui/icons-material/FormatListBulleted";
+import { NavLink } from "react-router-dom";
 
 export default function Delivery() {
     const [open, setOpen] = useState(false);
@@ -21,12 +22,14 @@ export default function Delivery() {
             </ListItemButton>
             <Collapse in={open} timeout="auto" unmountOnExit>
                 <List component="div" disablePadding>
-                    <ListItemButton sx={{ pl: 4 }}>
-                        <ListItemIcon>
-                            <FormatListBulletedIcon />
-                        </ListItemIcon>
-                        <ListItemText primary="Delivery List" />
-                    </ListItemButton>
+                    <NavLink to="delivery/list">
+                        <ListItemButton sx={{ pl: 4 }}>
+                            <ListItemIcon>
+                                <FormatListBulletedIcon />
+                            </ListItemIcon>
+                            <ListItemText primary="Delivery List" />
+                        </ListItemButton>
+                    </NavLink>
                 </List>
             </Collapse>
         </>
