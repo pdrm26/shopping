@@ -5,6 +5,7 @@ import WorkspacesIcon from "@mui/icons-material/Workspaces";
 import { useState } from "react";
 import ProductionQuantityLimitsIcon from "@mui/icons-material/ProductionQuantityLimits";
 import RedeemIcon from "@mui/icons-material/Redeem";
+import { NavLink } from "react-router-dom";
 
 export default function Product() {
     const [open, setOpen] = useState(false);
@@ -23,30 +24,38 @@ export default function Product() {
             </ListItemButton>
             <Collapse in={open} timeout="auto" unmountOnExit>
                 <List component="div" disablePadding>
-                    <ListItemButton sx={{ pl: 4 }}>
-                        <ListItemIcon>
-                            <AddCircleOutlined />
-                        </ListItemIcon>
-                        <ListItemText primary="Add Product" />
-                    </ListItemButton>
-                    <ListItemButton sx={{ pl: 4 }}>
-                        <ListItemIcon>
-                            <FormatListBulletedIcon />
-                        </ListItemIcon>
-                        <ListItemText primary="Products List" />
-                    </ListItemButton>
-                    <ListItemButton sx={{ pl: 4 }}>
-                        <ListItemIcon>
-                            <WorkspacesIcon />
-                        </ListItemIcon>
-                        <ListItemText primary="Sections" />
-                    </ListItemButton>
-                    <ListItemButton sx={{ pl: 4 }}>
-                        <ListItemIcon>
-                            <RedeemIcon />
-                        </ListItemIcon>
-                        <ListItemText primary="Offers" />
-                    </ListItemButton>
+                    <NavLink to="products/add">
+                        <ListItemButton sx={{ pl: 4 }}>
+                            <ListItemIcon>
+                                <AddCircleOutlined />
+                            </ListItemIcon>
+                            <ListItemText primary="Add Product" />
+                        </ListItemButton>
+                    </NavLink>
+                    <NavLink to="products/list">
+                        <ListItemButton sx={{ pl: 4 }}>
+                            <ListItemIcon>
+                                <FormatListBulletedIcon />
+                            </ListItemIcon>
+                            <ListItemText primary="Products List" />
+                        </ListItemButton>
+                    </NavLink>
+                    <NavLink to="products/sections">
+                        <ListItemButton sx={{ pl: 4 }}>
+                            <ListItemIcon>
+                                <WorkspacesIcon />
+                            </ListItemIcon>
+                            <ListItemText primary="Sections" />
+                        </ListItemButton>
+                    </NavLink>
+                    <NavLink to="products/offers">
+                        <ListItemButton sx={{ pl: 4 }}>
+                            <ListItemIcon>
+                                <RedeemIcon />
+                            </ListItemIcon>
+                            <ListItemText primary="Offers" />
+                        </ListItemButton>
+                    </NavLink>
                 </List>
             </Collapse>
         </>

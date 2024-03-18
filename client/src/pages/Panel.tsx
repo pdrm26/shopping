@@ -1,7 +1,7 @@
 import { Container, Grid } from "@mui/material";
 import Sidebar from "../components/Sidebar";
-import Dashboard from "../components/Dashboard";
 import Theme from "../theme/Theme";
+import { Outlet } from "react-router-dom";
 
 export default function Panel() {
     return (
@@ -12,7 +12,7 @@ export default function Panel() {
                         <Sidebar />
                     </Grid>
                     <Grid item md={9} sx={{ mt: "20px" }}>
-                        <Dashboard />
+                        <Outlet />
                     </Grid>
                 </Grid>
             </Container>

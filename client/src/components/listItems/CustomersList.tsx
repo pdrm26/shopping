@@ -3,6 +3,7 @@ import { Collapse, List, ListItemButton, ListItemIcon, ListItemText } from "@mui
 import { useState } from "react";
 import FormatListBulletedIcon from "@mui/icons-material/FormatListBulleted";
 import PeopleAltIcon from "@mui/icons-material/PeopleAlt";
+import { NavLink } from "react-router-dom";
 
 export default function CustomersList() {
     const [open, setOpen] = useState(false);
@@ -21,12 +22,14 @@ export default function CustomersList() {
             </ListItemButton>
             <Collapse in={open} timeout="auto" unmountOnExit>
                 <List component="div" disablePadding>
-                    <ListItemButton sx={{ pl: 4 }}>
-                        <ListItemIcon>
-                            <FormatListBulletedIcon />
-                        </ListItemIcon>
-                        <ListItemText primary="Customers List" />
-                    </ListItemButton>
+                    <NavLink to="customers/list">
+                        <ListItemButton sx={{ pl: 4 }}>
+                            <ListItemIcon>
+                                <FormatListBulletedIcon />
+                            </ListItemIcon>
+                            <ListItemText primary="Customers List" />
+                        </ListItemButton>
+                    </NavLink>
                 </List>
             </Collapse>
         </>
