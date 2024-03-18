@@ -3,7 +3,7 @@ import Panel from "./pages/Panel";
 import CustomerList from "./components/panels/customers/CustomersList";
 import ProductsList from "./components/panels/product/ProductsList";
 import ProductAdd from "./components/panels/product/ProductAdd";
-import ProductsSection from "./components/panels/product/ProductsSection";
+import ProductCategories from "./components/panels/product/ProductCategories";
 import ProductsOffers from "./components/panels/product/ProductsOffers";
 import OrdersList from "./components/panels/orders/OrdersList";
 import FinancialPayments from "./components/panels/financial/FinancialPayments";
@@ -11,6 +11,7 @@ import FinancialDiscountCodes from "./components/panels/financial/FinancialDisco
 import DeliveryList from "./components/panels/delivery/DeliveryList";
 import FeedbacksList from "./components/panels/feedbacks/FeedbacksList";
 import SettingsSecurity from "./components/panels/settings/SettingsSecurity";
+import ProductCategoryAdd from "./components/panels/product/ProductCategoryAdd";
 
 export default function App() {
     return (
@@ -20,7 +21,8 @@ export default function App() {
                     {/* Product */}
                     <Route path="products/list" element={<ProductsList />} />
                     <Route path="products/add" element={<ProductAdd />} />
-                    <Route path="products/sections" element={<ProductsSection />} />
+                    <Route path="products/categories/add" element={<ProductCategoryAdd />} />
+                    <Route path="products/categories" element={<ProductCategories />} />
                     <Route path="products/offers" element={<ProductsOffers />} />
                     {/* Orders */}
                     <Route path="orders/list" element={<OrdersList />} />

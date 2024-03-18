@@ -32,6 +32,14 @@ export default function Product() {
                             <ListItemText primary="Add Product" />
                         </ListItemButton>
                     </NavLink>
+                    <NavLink to="products/categories/add">
+                        <ListItemButton sx={{ pl: 4 }}>
+                            <ListItemIcon>
+                                <AddCircleOutlined />
+                            </ListItemIcon>
+                            <ListItemText primary="Add Category" />
+                        </ListItemButton>
+                    </NavLink>
                     <NavLink to="products/list">
                         <ListItemButton sx={{ pl: 4 }}>
                             <ListItemIcon>
@@ -40,12 +48,12 @@ export default function Product() {
                             <ListItemText primary="Products List" />
                         </ListItemButton>
                     </NavLink>
-                    <NavLink to="products/sections">
+                    <NavLink to="products/categories">
                         <ListItemButton sx={{ pl: 4 }}>
                             <ListItemIcon>
                                 <WorkspacesIcon />
                             </ListItemIcon>
-                            <ListItemText primary="Sections" />
+                            <ListItemText primary="Categories" />
                         </ListItemButton>
                     </NavLink>
                     <NavLink to="products/offers">
