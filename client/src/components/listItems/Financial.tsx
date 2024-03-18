@@ -4,6 +4,7 @@ import { useState } from "react";
 import AccountBalanceWalletIcon from "@mui/icons-material/AccountBalanceWallet";
 import LocalAtmIcon from "@mui/icons-material/LocalAtm";
 import MoneyOffIcon from "@mui/icons-material/MoneyOff";
+import { NavLink } from "react-router-dom";
 
 export default function Financial() {
     const [open, setOpen] = useState(false);
@@ -22,18 +23,22 @@ export default function Financial() {
             </ListItemButton>
             <Collapse in={open} timeout="auto" unmountOnExit>
                 <List component="div" disablePadding>
-                    <ListItemButton sx={{ pl: 4 }}>
-                        <ListItemIcon>
-                            <AccountBalanceWalletIcon />
-                        </ListItemIcon>
-                        <ListItemText primary="Payments" />
-                    </ListItemButton>
-                    <ListItemButton sx={{ pl: 4 }}>
-                        <ListItemIcon>
-                            <MoneyOffIcon />
-                        </ListItemIcon>
-                        <ListItemText primary="Discount Codes" />
-                    </ListItemButton>
+                    <NavLink to="financial/payments">
+                        <ListItemButton sx={{ pl: 4 }}>
+                            <ListItemIcon>
+                                <AccountBalanceWalletIcon />
+                            </ListItemIcon>
+                            <ListItemText primary="Payments" />
+                        </ListItemButton>
+                    </NavLink>
+                    <NavLink to="financial/discount-codes">
+                        <ListItemButton sx={{ pl: 4 }}>
+                            <ListItemIcon>
+                                <MoneyOffIcon />
+                            </ListItemIcon>
+                            <ListItemText primary="Discount Codes" />
+                        </ListItemButton>
+                    </NavLink>
                 </List>
             </Collapse>
         </>
