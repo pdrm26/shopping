@@ -1,10 +1,14 @@
 import { ThemeProvider } from "@emotion/react";
 import { CssBaseline, createTheme } from "@mui/material";
+import { grey } from "@mui/material/colors";
 
 const theme = createTheme({
     palette: {
         background: {
             default: "#f5f5f5",
+        },
+        primary: {
+            main: grey[900],
         },
     },
 });
