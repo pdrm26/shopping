@@ -1,12 +1,13 @@
-import { Box, Button, Divider, TextField, Typography } from "@mui/material";
+import { Box, TextField } from "@mui/material";
 import Content from "../../Content";
 import { useState } from "react";
 import DialogButton from "../../DialogButton";
 import Category from "./Category";
+import { IAttribute } from "./IAttribute";
 
 interface Category {
     title: string;
-    attributes: [];
+    attributes: IAttribute[];
 }
 
 export default function EditCategory() {
@@ -42,7 +43,7 @@ export default function EditCategory() {
                 <DialogButton buttonText="Add Group" handleAddCategory={handleAddCategory} />
                 <Box component="div">
                     {categories.map((category) => (
-                        <Category title={category.title} attributes={category.attributes} />
+                        <Category title={category.title} attributes={category.attributes} key={category.title} />
                     ))}
                 </Box>
             </Box>
