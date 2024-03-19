@@ -1,8 +1,9 @@
-import { Box, TextField } from "@mui/material";
+import { Box, Button, TextField } from "@mui/material";
 import Content from "../../Content";
 import { useState } from "react";
 import DialogButton from "../../DialogButton";
 import Category from "./Category";
+import SaveIcon from "@mui/icons-material/Save";
 import { IAttribute } from "./IAttribute";
 
 interface Category {
@@ -22,25 +23,20 @@ export default function EditCategory() {
             <Box
                 component="form"
                 sx={{
-                    "& > :not(style)": { m: 1 },
+                    "& > :not(style)": { m: 1, flexGrow: 1 },
+                    background: "#f5f5f5",
+                    borderRadius: 1,
+                    px: 5,
+                    display: "flex",
                 }}
                 autoComplete="off"
             >
-                <TextField
-                    size="small"
-                    id="category_label_en"
-                    label="Category English Label"
-                    variant="outlined"
-                    sx={{ minWidth: "400px" }}
-                />
-                <TextField
-                    size="small"
-                    id="category_label_fa"
-                    label="Category Persian Label"
-                    variant="outlined"
-                    sx={{ minWidth: "400px" }}
-                />
+                <TextField size="small" id="category_label_en" label="Category English Label" variant="outlined" />
+                <TextField size="small" id="category_label_fa" label="Category Persian Label" variant="outlined" />
                 <DialogButton buttonText="Add Group" handleAddCategory={handleAddCategory} />
+                <Button variant="outlined" startIcon={<SaveIcon />}>
+                    Save
+                </Button>
                 <Box component="div">
                     {categories.map((category) => (
                         <Category title={category.title} attributes={category.attributes} key={category.title} />
