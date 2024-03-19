@@ -20,23 +20,24 @@ export default function EditCategory() {
 
     return (
         <Content title="Edit Category">
-            <Box
-                component="form"
-                sx={{
-                    "& > :not(style)": { m: 1, flexGrow: 1 },
-                    background: "#f5f5f5",
-                    borderRadius: 1,
-                    px: 5,
-                    display: "flex",
-                }}
-                autoComplete="off"
-            >
-                <TextField size="small" id="category_label_en" label="Category English Label" variant="outlined" />
-                <TextField size="small" id="category_label_fa" label="Category Persian Label" variant="outlined" />
-                <DialogButton buttonText="Add Group" handleAddCategory={handleAddCategory} />
-                <Button variant="outlined" startIcon={<SaveIcon />}>
-                    Save
-                </Button>
+            <Box component="form" autoComplete="off">
+                <Box
+                    component="div"
+                    sx={{
+                        "& > :not(style)": { m: 1, flexGrow: 1 },
+                        display: "flex",
+                        background: "#f5f5f5",
+                        borderRadius: 1,
+                        px: 5,
+                    }}
+                >
+                    <TextField size="small" id="category_label_en" label="Category English Label" variant="outlined" />
+                    <TextField size="small" id="category_label_fa" label="Category Persian Label" variant="outlined" />
+                    <DialogButton buttonText="Add Group" handleAddCategory={handleAddCategory} />
+                    <Button variant="outlined" startIcon={<SaveIcon />}>
+                        Save
+                    </Button>
+                </Box>
                 <Box component="div">
                     {categories.map((category) => (
                         <Category title={category.title} attributes={category.attributes} key={category.title} />
